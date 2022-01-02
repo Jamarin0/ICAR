@@ -10,6 +10,6 @@ container.registerSingleton<IDateProvider>(
 )
 
 container.registerInstance<IMailProvider>(
-    "EtherealMailProvider",
+    "MailProvider",
     new EtherealMailProvider()
 )
