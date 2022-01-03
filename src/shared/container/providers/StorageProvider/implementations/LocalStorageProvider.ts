@@ -2,9 +2,9 @@ import upload from "@config/upload";
 import fs from "fs";
 import { resolve } from "path";
 
-import { IStoregeProvider } from "../IStoregeProvider";
+import { IStorageProvider } from "../IStorageProvider";
 
-class LocalStorageProvider implements IStoregeProvider {
+class LocalStorageProvider implements IStorageProvider {
     async save(file: string, folder: string): Promise<string> {
         await fs.promises.rename(
             resolve(upload.tmpFolder, file),
